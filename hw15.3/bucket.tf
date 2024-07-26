@@ -30,6 +30,9 @@ resource "yandex_storage_bucket" "test" {
   bucket                = "netologybucket"
   max_size              = 1028
   default_storage_class = "standard"
+  website {
+    index_document = "index.html"
+  }
   anonymous_access_flags {
     read        = true
     list        = true
